@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Wedding - Luxury Night Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* ==================================== */
+        /* 1. VARIABEL & RESET DASAR (Luxury Night Theme) */
+        /* ==================================== */
+        :root {
+            --black-pekat: #0D0D0D;      /* Hitam Pekat */
+            --black-soft: #121212;       /* Hitam Lembut */
+            --black-abu: #181818;        /* Hitam Keabu-an */
+            --abu-lembut: #2C2C2C;       /* Abu Lembut untuk latar card */
+            --gold: #D4AF37;             /* Emas Mewah */
+            --rose-gold: #E0BFB8;        /* Rose Gold */
+            --putih-mewah: #F5F5F5;      /* Putih untuk Teks */
+            --shadow-gold-glow: 0 0 20px rgba(212, 175, 55, 0.7);
+            --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--putih-mewah);
+            background-color: var(--black-soft);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .section-padding {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* ==================================== */
+        /* 2. NAVBAR (Fixed/Sticky) & MODAL */
+        /* ==================================== */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 5%;
+            background-color: var(--black-pekat);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Bayangan halus */
+            z-index: 1000;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .logo a {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--rose-gold); /* Efek hover rose gold */
+        }
+
+        #loginBtn {
+            background-color: var(--gold);
+            color: var(--black-pekat);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        #loginBtn:hover {
+            background-color: var(--rose-gold);
+            box-shadow: var(--shadow-gold-glow);
+        }
+
+        /* Modal Login */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8); 
+        }
+
+        .modal-content {
+            background-color: var(--black-soft);
+            margin: 10% auto; 
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%; 
+            max-width: 400px;
+            box-shadow: var(--shadow-gold-glow);
+            position: relative;
+            text-align: center;
+            border: 1px solid var(--gold);
+        }
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: var(--black-pekat);
+            color: var(--putih-mewah);
+            border: 1px solid var(--abu-lembut);
+            border-radius: 4px;
+        }
+        .modal-content button {
+            background-color: var(--gold);
+            color: var(--black-pekat);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: var(--gold);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* ==================================== */
+        /* 3. HERO SECTION */
+        /* ==================================== */
+        #home {
+            min-height: 100vh;
+            padding-top: 100px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* GAMBAR BARU STABIL: Dekorasi pernikahan malam hari dengan banyak cahaya gold */
+            background-image: url('https://images.unsplash.com/photo-1542044760-3d7c43c16260?q=80&w=2070&auto=format&fit=cover'); 
+            background-size: cover;
+            background-position: center 40%;
+            text-align: center;
+        }
+
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            /* Overlay gradasi hitam transparan → gold lembut */
+            background: linear-gradient(180deg, 
+                        rgba(13, 13, 13, 0.9) 0%, 
+                        rgba(212, 175, 55, 0.3) 70%,
+                        rgba(13, 13, 13, 0.8) 100%); 
+            z-index: 1;
+        }
+        
+        #home > * {
+            position: relative;
+            z-index: 2; 
+        }
+
+        #home h1 {
+            font-size: clamp(2.5em, 5vw, 4.8em);
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: clamp(1.1em, 2vw, 1.5em);
+            color: var(--rose-gold);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+            margin-bottom: 50px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 0 15px;
+            transition: all 0.4s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 2px solid transparent;
+        }
+        
+        .cta-button:nth-of-type(1) { /* Lihat Paket -> Emas */
+            background-color: var(--gold);
+            color: var(--black-pekat);
+        }
+        .cta-button:nth-of-type(2) { /* Hubungi Kami -> Border Rose Gold */
+            background-color: transparent;
+            color: var(--rose-gold);
+            border-color: var(--rose-gold);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold-glow); /* Efek hover berkilau lembut */
+            background-color: var(--gold);
+            color: var(--black-pekat);
+            border-color: var(--gold);
+        }
+        .cta-button:nth-of-type(2):hover {
+            color: var(--black-pekat);
+        }
+
+
+        /* ==================================== */
+        /* 4. TENTANG KAMI (ABOUT & TIM) */
+        /* ==================================== */
+        #about {
+            /* Background gradasi gold tua → hitam elegan */
+            background: linear-gradient(180deg, var(--black-soft) 0%, var(--black-pekat) 100%);
+            padding: 100px 5%;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto 0;
+            text-align: left;
+        }
+        
+        .about-image {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: var(--shadow-gold-glow);
+            border: 2px solid var(--gold);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content-text {
+            padding: 20px;
+        }
+        .about-content-text p {
+            color: var(--putih-mewah);
+            margin-bottom: 25px;
+            font-size: 1.05em;
+        }
+
+        .info-box.team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Disesuaikan untuk 4 orang */
+            gap: 15px;
+            padding: 20px;
+            background-color: var(--abu-lembut);
+            border-radius: 10px;
+            border-left: 5px solid var(--gold);
+            margin-top: 20px;
+        }
+
+        .team-member-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            text-align: center;
+        }
+
+        /* FOTO PROFIL TIM */
+        .team-member-profile img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--rose-gold);
+            box-shadow: 0 0 5px var(--gold);
+            /* Fallback/Placeholder jika gambar lokal tidak ditemukan */
+            background-color: var(--black-abu); 
+        }
+
+        .team-member-profile span {
+            font-weight: 500;
+            color: var(--gold);
+            font-size: 0.85em;
+            line-height: 1.1;
+        }
+        .team-member-profile small {
+            font-size: 0.7em;
+            color: var(--rose-gold);
+        }
+        
+        .info-location {
+            padding: 15px;
+            background-color: var(--abu-lembut);
+            border-radius: 10px;
+            border-left: 5px solid var(--rose-gold);
+            margin-top: 15px;
+            color: var(--putih-mewah);
+        }
+
+        /* ==================================== */
+        /* 5. LAYANAN KAMI (SERVICE) */
+        /* ==================================== */
+        #layanan {
+            background-color: var(--black-soft);
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: var(--black-pekat);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
+            text-align: center;
+            border: 1px solid var(--abu-lembut);
+        }
+
+        .service-card i {
+            font-size: 3em;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+        }
+        
+        .service-card h3 {
+            color: var(--rose-gold);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold-glow); /* Efek glow saat hover */
+            border-color: var(--gold);
+        }
+
+        /* ==================================== */
+        /* 6. GALERI */
+        /* ==================================== */
+        #galeri {
+            background: linear-gradient(180deg, var(--black-soft) 0%, var(--black-abu) 100%);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            border: 3px solid var(--rose-gold);
+            box-shadow: 0 0 10px rgba(224, 191, 184, 0.5); 
+            transition: all 0.4s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.4s;
+            display: block; 
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-gold-glow); /* Efek shadow gold saat hover */
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Efek zoom lembut */
+        }
+
+
+        /* ==================================== */
+        /* 7. PAKET PERNIKAHAN */
+        /* ==================================== */
+        #paket {
+            background-color: var(--black-pekat); /* Latar hitam doff */
+        }
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .package-card {
+            background-color: var(--abu-lembut);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: all 0.3s;
+            border-top: 5px solid var(--abu-lembut);
+        }
+
+        .package-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .package-card .price {
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .package-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+            color: var(--putih-mewah);
+        }
+        
+        .package-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--black-soft);
+            font-size: 0.95em;
+        }
+        
+        /* Penyesuaian Paket (Warna Dominan) */
+        .package-card:nth-child(1) { border-top-color: var(--putih-mewah); } /* Silver */
+        .package-card:nth-child(2) { border-top-color: var(--gold); } /* Gold */
+        .package-card:nth-child(3) { border-top-color: var(--rose-gold); } /* Platinum */
+
+        .package-card:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-gold-glow);
+        }
+
+        /* ==================================== */
+        /* 8. TESTIMONI (CAROUSEL) */
+        /* ==================================== */
+        #testimonial {
+            /* Background gradasi rose gold → hitam */
+            background: linear-gradient(180deg, var(--black-pekat) 0%, var(--black-soft) 100%);
+            overflow: hidden;
+        }
+        
+        .testimonial-carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            max-width: 1100px;
+            margin: 40px auto;
+            align-items: center;
+        }
+
+        .testi-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .testi-card {
+            min-width: 100%;
+            padding: 40px;
+            background-color: var(--abu-lembut);
+            border-radius: 15px;
+            text-align: center;
+            font-style: italic;
+            border: 1px solid var(--rose-gold);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        
+        .testi-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid var(--gold); /* Frame lingkaran bertepi gold */
+        }
+        .testi-card span {
+            font-weight: 600;
+            color: var(--gold);
+        }
+        
+        .carousel-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gold);
+            color: var(--black-pekat);
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 50;
+            font-size: 1.5em;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .carousel-nav-btn:hover {
+            background: var(--rose-gold);
+        }
+        .prev-btn-testi { left: 10px; }
+        .next-btn-testi { right: 10px; }
+        
+
+        /* ==================================== */
+        /* 9. KONTAK KAMI & MAP */
+        /* ==================================== */
+        #contact {
+            background-color: var(--black-abu); /* Background hitam keabu-an */
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+            text-align: left;
+            background-color: var(--black-pekat);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-gold-glow);
+            border: 1px solid var(--gold);
+        }
+
+        .contact-form form input,
+        .contact-form form textarea {
+            width: 100%;
+            background-color: transparent;
+            color: var(--putih-mewah);
+            border: 1px solid var(--gold); /* Border emas */
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+        .contact-form form input::placeholder,
+        .contact-form form textarea::placeholder {
+            color: var(--rose-gold);
+        }
+        .contact-form form input:focus,
+        .contact-form form textarea:focus {
+            border-color: var(--rose-gold);
+            box-shadow: 0 0 5px var(--rose-gold);
+            outline: none;
+        }
+        
+        .contact-info i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+        
+        .social-links-contact a {
+            font-size: 1.8em;
+            color: var(--rose-gold);
+            margin-right: 15px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-links-contact a:hover {
+            color: var(--gold);
+            transform: scale(1.1);
+        }
+        
+        /* Google Map */
+        .map-embed {
+            margin-top: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+        }
+        
+        /* ==================================== */
+        /* 10. FOOTER & BUTTON ON TOP */
+        /* ==================================== */
+        footer {
+            background-color: var(--black-pekat); 
+            color: var(--gold);
+            padding: 30px 5%;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer p {
+            color: var(--putih-mewah);
+        }
+        footer strong {
+            color: var(--gold);
+        }
+        
+        #btnOnTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 99;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            color: var(--black-pekat);
+            text-decoration: none;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
+        }
+        #btnOnTop:hover {
+            background-color: var(--rose-gold);
+            transform: scale(1.1);
+        }
+        
+        /* ==================================== */
+        /* 11. RESPONSIVE DESIGN */
+        /* ==================================== */
+        @media (max-width: 1024px) {
+            /* Navbar Mobile */
+            nav { display: none; }
+            #navbar { flex-wrap: wrap; justify-content: center; }
+            .logo { margin-bottom: 10px; }
+            #loginBtn { margin-top: 10px; width: 100%; }
+
+            /* About Mobile */
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-image { order: -1; margin-bottom: 20px;}
+            .about-content-text { text-align: center; }
+
+            /* Kontak Mobile */
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 600px) {
+            .team-member-profile span { font-size: 0.8em; }
+            .team-member-profile small { font-size: 0.65em; }
+        }
+    </style>
+</head>
+<body>
+
+    <a id="btnOnTop" href="#home" title="Kembali ke Atas"><i class="fas fa-arrow-up"></i></a>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h2>Login Klien</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p style="font-size: 0.9em; margin-top: 10px; color: var(--rose-gold);"><a href="#" style="color: var(--gold); text-decoration: none;">Lupa Password?</a></p>
+        </div>
+    </div>
+
+    <header id="navbar">
+        <div class="logo"><a href="#home">Elegant Wedding</a></div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#paket">Paket</a>
+            <a href="#testimonial">Testimoni</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+        <button id="loginBtn">Login</button>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Wujudkan Momen Bahagiamu Bersama Elegant Wedding</h1>
+            <p>Luxury Night Celebration of Love and Elegance.</p>
+            <a href="#paket" class="cta-button">Lihat Paket</a>
+            <a href="#contact" class="cta-button">Hubungi Kami</a>
+        </section>
+
+        <section id="about" class="section-padding">
+            <h2>Our Story & Vision</h2>
+            <div class="about-grid">
+                <div class="about-content-text">
+                    <p>Elegant Wedding hadir untuk menjadikan setiap pernikahan tampak megah, elegan, dan berkesan abadi. Kami mengutamakan pelayanan profesional dan desain yang mewah dalam setiap detail acara Anda. Kami percaya bahwa pernikahan Anda adalah mahakarya yang harus diukir dengan kesempurnaan.</p>
+                    
+                    <strong style="color: var(--rose-gold); display: block; margin-top: 15px;">Tim Kami:</strong>
+                    <div class="info-box team-members">
+                        <div class="team-member-profile">
+                            <img src="enggar.jpg" alt="Foto Enggar">
+                            <span>Enggar Dwi Herlambang</span>
+                            <small>(102240002)</small>
+                        </div>
+                        
+                        <div class="team-member-profile">
+                            <img src="aqil.jpg" alt="Foto Aqil">
+                            <span>Muhamad Aqil Mahdi</span>
+                            <small>(102240033)</small>
+                        </div>
+                        
+                        <div class="team-member-profile">
+                            <img src="anita.jpg" alt="Foto Anita">
+                            <span>Anita Ulfiana</span>
+                            <small>(102240018)</small>
+                        </div>
+                         <div class="team-member-profile">
+                            <img src="atabik.jpg" onerror="this.onerror=null; this.src='https://randomuser.me/api/portraits/men/77.jpg';" alt="Foto Atabik"> 
+                            <span>m.atabik azzaki</span>
+                            <small>(10240029)</small>
+                        </div>
+                    </div>
+                    
+                    <div class="info-location">
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Alamat: Jl. Mawar Indah No. 27, Surakarta, Jawa Tengah, Indonesia
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="pasangan.jpg" alt="Pasangan Pengantin" style="width:300px; margin-top:30px; border-radius:15px; box-shadow: 0 0 20px rgba(212,175,55,0.7);">
+                </div>
+            </div>
+        </section>
+
+        <section id="layanan" class="section-padding">
+            <h2>Layanan Eksklusif Kami</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; color: var(--rose-gold);">Kami menyediakan layanan premium dengan fokus pada kualitas, kemewahan, dan pengalaman yang tak tertandingi.</p>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Dekorasi & Konsep</h3>
+                    <p>Menciptakan desain panggung dan venue yang megah dengan instalasi lampu dan bunga yang memukau.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Rias Pengantin</h3>
+                    <p>Sentuhan Rias dari MUA terkemuka, menjamin penampilan yang elegan, flawless, dan tahan lama.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-film"></i>
+                    <h3>Dokumentasi Premium</h3>
+                    <p>Tim sinematografer dan fotografer handal untuk mengabadikan momen dengan hasil yang artistik dan mewah.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cocktail"></i>
+                    <h3>Catering & Gedung</h3>
+                    <p>Pilihan menu internasional premium dan manajemen venue yang mewah, sempurna untuk pesta malam Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri" class="section-padding">
+    <h2>Kilauan Momen Terbaik</h2>
+    <p style="max-width: 800px; margin: 0 auto 40px; color: var(--rose-gold);">Kumpulan foto pernikahan yang kami tangani, merefleksikan keindahan dan kemewahan tema malam hari.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="malamhari.jpg" alt="Dekorasi Panggung Penuh Cahaya"></div>
+        <div class="gallery-item"><img src="lilin.jpg" alt="Foto Pasangan di Pesta Malam"></div>
+        <div class="gallery-item"><img src="mewah.jpg" alt="Meja Dekorasi Makanan"></div>
+        <div class="gallery-item"><img src="meja.jpg" alt="Detail Meja Makan Mewah"></div>
+        <div class="gallery-item"><img src="prwd.jpg" alt="Pencahayaan Emas Interior"></div>
+        <div class="gallery-item"><img src="gaun2.jpg" alt="Cincin dan Bunga di Malam Hari"></div>
+    </div>
+</section>
+
+        <section id="paket" class="section-padding">
+            <h2>Pilihan Paket Luxury Night</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; color: var(--rose-gold);">Pilih kemewahan yang sesuai dengan perayaan impian Anda.</p>
+            <div class="package-grid">
+                <div class="package-card">
+                    <h3 style="color: var(--putih-mewah);">Paket Silver</h3>
+                    <div class="price" style="color: var(--putih-mewah);">Rp 85 Juta</div>
+                    <ul>
+                        <li><i class="fas fa-check" style="color: var(--rose-gold);"></i> Koordinasi Hari-H</li>
+                        <li><i class="fas fa-check" style="color: var(--rose-gold);"></i> Dekorasi Minimalis Elegan</li>
+                        <li><i class="fas fa-check" style="color: var(--rose-gold);"></i> Dokumentasi Foto (1 Hari)</li>
+                        <li><i class="fas fa-check" style="color: var(--rose-gold);"></i> MUA & Gaun Pilihan Standard</li>
+                    </ul>
+                    <a href="#contact" class="cta-button" style="background-color: var(--putih-mewah); color: var(--black-pekat);">Pesan Sekarang</a>
+                </div>
+                <div class="package-card" style="background-color: var(--black-soft);">
+                    <h3 style="color: var(--gold);">Paket Gold</h3>
+                    <div class="price" style="color: var(--gold);">Rp 150 Juta</div>
+                    <ul>
+                        <li><i class="fas fa-crown" style="color: var(--gold);"></i> Full Wedding Organizer</li>
+                        <li><i class="fas fa-crown" style="color: var(--gold);"></i> Dekorasi Premium (Lighting Specialist)</li>
+                        <li><i class="fas fa-crown" style="color: var(--gold);"></i> Dokumentasi Foto & Video Tim</li>
+                        <li><i class="fas fa-crown" style="color: var(--gold);"></i> MUA High End & Gaun Eksklusif</li>
+                        <li><i class="fas fa-crown" style="color: var(--gold);"></i> Free Pre-Wedding Session</li>
+                    </ul>
+                    <a href="#contact" class="cta-button" style="background-color: var(--gold); color: var(--black-pekat);">Pesan Sekarang</a>
+                </div>
+                <div class="package-card">
+                    <h3 style="color: var(--rose-gold);">Paket Platinum</h3>
+                    <div class="price" style="color: var(--rose-gold);">Mulai Rp 250 Juta</div>
+                    <ul>
+                        <li><i class="fas fa-star" style="color: var(--rose-gold);"></i> All-Inclusive Luxury Planning</li>
+                        <li><i class="fas fa-star" style="color: var(--rose-gold);"></i> Dekorasi Custom Theme & Venue Setup</li>
+                        <li><i class="fas fa-star" style="color: var(--rose-gold);"></i> Full Documentation Team + Drone</li>
+                        <li><i class="fas fa-star" style="color: var(--rose-gold);"></i> Pilihan Menu Internasional Bintang Lima</li>
+                        <li><i class="fas fa-star" style="color: var(--rose-gold);"></i> Hotel & Akomodasi Keluarga Inti</li>
+                    </ul>
+                    <a href="#contact" class="cta-button" style="background-color: var(--rose-gold); color: var(--black-pekat);">Pesan Sekarang</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonial" class="section-padding">
+            <h2>Kesan dari Klien Kami</h2>
+            <div class="testimonial-carousel">
+                <button class="carousel-nav-btn prev-btn-testi">◀</button>
+                <div class="testi-wrapper">
+                    <div class="testi-card">
+                        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Foto Klien 1">
+                        <p>"Perayaan malam hari kami sangat sempurna! Dekorasi dengan lampu dan lilin emas terasa begitu mewah dan romantis. Tim WO sangat terorganisir dan detail."</p>
+                        <span>- Jessica & Rendy</span>
+                    </div>
+                    <div class="testi-card">
+                        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Foto Klien 2">
+                        <p>"Pelayanannya sangat profesional dari awal hingga akhir. Kami merasa tenang karena semua detail, bahkan yang terkecil, ditangani dengan sempurna oleh tim Elegant Wedding."</p>
+                        <span>- David & Risa</span>
+                    </div>
+                    <div class="testi-card">
+                        <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Foto Klien 3">
+                        <p>"Sangat direkomendasikan! MUA-nya luar biasa, membuat saya merasa seperti ratu di hari pernikahan. Desain dekorasi di gedung juga berhasil membuat semua tamu terpukau."</p>
+                        <span>- Luna & Yoga</span>
+                    </div>
+                    <div class="testi-card">
+                        <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Foto Klien 4">
+                        <p>"Tim Elegant Wedding adalah partner terbaik! Mereka mewujudkan visi pernikahan kami yang mewah di malam hari tanpa ada kendala sedikit pun. Sangat berkesan!"</p>
+                        <span>- Kevin & Michelle</span>
+                    </div>
+                </div>
+                <button class="carousel-nav-btn next-btn-testi">▶</button>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <h2>Konsultasikan Impian Anda</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px; color: var(--rose-gold);">Kami siap menjawab setiap pertanyaan Anda. Hubungi kami atau kunjungi kantor kami.</p>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Nama Lengkap" required>
+                        <input type="email" placeholder="Email Anda" required>
+                        <input type="tel" placeholder="Nomor Telepon" required>
+                        <textarea placeholder="Pesan Anda (Detail Acara)" rows="5" required></textarea>
+                        <button type="submit" class="cta-button" style="width: 100%; background-color: var(--gold); color: var(--black-pekat); border: none;">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> **Alamat:** Jl. Mawar Indah No. 27, Surakarta, Jawa Tengah</p>
+                    <p><i class="fas fa-phone"></i> **Telepon:** +62 812 3456 7890</p>
+                    <p><i class="fas fa-envelope"></i> **Email:** elegantwedding@gmail.com</p>
+                    
+                    <strong style="display: block; margin-top: 30px; margin-bottom: 10px; color: var(--gold);">Ikuti Kami:</strong>
+                    <div class="social-links-contact">
+                        <a href="https://www.instagram.com/elegantwedding.id" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=6281234567890" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                    
+                    <div class="map-embed">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15822.467384666014!2d110.79155255000001!3d-7.55806655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a168536b5683b%3A0x6d9f80a84d41e5e0!2sSurakarta%2C%20Jawa%20Tengah!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Elegant Wedding Organizer</strong> | Surakarta, Jawa Tengah, Indonesia</p>
+        <p style="margin-top: 5px;">© 2025 Elegant Wedding Organizer — Dibuat oleh Enggar Dwi Herlambang (102240002), Muhamad Aqil Mahdi (102240033), Anita Ulfiana (102240018), dan m.atabik azzaki (10240029)</p>
+    </footer>
+
+    <script>
+        // ====================================
+        // JAVASCRIPT
+        // ====================================
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Fungsionalitas Login Modal
+            const loginModal = document.getElementById('loginModal');
+            const loginBtn = document.getElementById('loginBtn');
+            const closeBtn = document.querySelector('.close-btn');
+
+            if (loginBtn) {
+                loginBtn.onclick = function() {
+                    loginModal.style.display = 'block';
+                }
+            }
+
+            if (closeBtn) {
+                closeBtn.onclick = function() {
+                    loginModal.style.display = 'none';
+                }
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == loginModal) {
+                    loginModal.style.display = 'none';
+                }
+            }
+            
+            // Simulasi Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if(contactForm) {
+                 contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Pesan Anda telah terkirim! Tim Elegant Wedding akan segera menghubungi Anda.');
+                    e.target.reset();
+                });
+            }
+            const loginForm = document.getElementById('loginForm');
+            if(loginForm) {
+                 loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Login Berhasil (Simulasi)!');
+                    loginModal.style.display = 'none';
+                });
+            }
+
+
+            // 2. Button On Top & Sticky Navbar Visibility
+            const btnOnTop = document.getElementById('btnOnTop');
+
+            function checkScroll() {
+                // Button On Top visibility
+                if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                    btnOnTop.style.display = 'flex';
+                } else {
+                    btnOnTop.style.display = 'none';
+                }
+            }
+
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Panggil sekali saat load
+
+            
+            // 3. Carousel Testimoni
+            const testiWrapper = document.querySelector('.testi-wrapper');
+            const testiCards = document.querySelectorAll('.testi-card');
+            const prevBtnTesti = document.querySelector('.prev-btn-testi');
+            const nextBtnTesti = document.querySelector('.next-btn-testi');
+            let testiIndex = 0;
+
+            function updateTestiCarousel() {
+                if (testiCards.length === 0) return;
+                // Hitung lebar card berdasarkan lebar container yang terlihat (min-width: 100% pada CSS)
+                const carouselContainer = testiWrapper.parentElement;
+                const cardWidth = carouselContainer.offsetWidth; 
+                testiWrapper.style.transform = `translateX(${-testiIndex * cardWidth}px)`;
+            }
+
+            if (prevBtnTesti) {
+                prevBtnTesti.addEventListener('click', () => {
+                    testiIndex = (testiIndex > 0) ? testiIndex - 1 : testiCards.length - 1;
+                    updateTestiCarousel();
+                });
+            }
+
+            if (nextBtnTesti) {
+                nextBtnTesti.addEventListener('click', () => {
+                    testiIndex = (testiIndex < testiCards.length - 1) ? testiIndex + 1 : 0;
+                    updateTestiCarousel();
+                });
+            }
+
+            window.addEventListener('resize', () => {
+                updateTestiCarousel();
+            });
+            updateTestiCarousel(); // Panggil saat DOMContentLoaded
+        });
+    </script>
+</body>
+</html>
